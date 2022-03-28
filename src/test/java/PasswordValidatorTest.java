@@ -6,25 +6,25 @@ class PasswordValidatorTest {
 
     @Test
     void isPasswordLong_pwEquals6(){
-        assertFalse(PasswordValidator.validLength("Shorty"));
+        assertFalse(PasswordValidator.hasValidLength("Shorty"));
     }
     @Test
     void isPasswordLong_pwEquals7(){
-        assertFalse(PasswordValidator.validLength("Shorty1"));
+        assertFalse(PasswordValidator.hasValidLength("Shorty1"));
     }
     @Test
     void isPasswordLong_pwEquals8(){
-        assertTrue(PasswordValidator.validLength("Shorty11"));
+        assertTrue(PasswordValidator.hasValidLength("Shorty11"));
     }
 
     @Test
     void containsDigit_withDigit(){
-        assertTrue(PasswordValidator.checkNums("Shorty11"));
+        assertTrue(PasswordValidator.hasNums("Shorty11"));
     }
 
     @Test
     void containsDigit_withoutDigit(){
-        assertFalse(PasswordValidator.checkNums("ShortyIsCool"));
+        assertFalse(PasswordValidator.hasNums("ShortyIsCool"));
     }
 
     @Test
@@ -34,7 +34,7 @@ class PasswordValidatorTest {
 
     @Test
     void isLowerCase(){
-        assertTrue(PasswordValidator.checkLowerCase("Shorty11"));//SHORTY11
+        assertTrue(PasswordValidator.containsLowerCase("Shorty11"));//SHORTY11
     }
 
     @Test
