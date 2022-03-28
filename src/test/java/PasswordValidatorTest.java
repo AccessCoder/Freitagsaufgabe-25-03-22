@@ -6,15 +6,15 @@ class PasswordValidatorTest {
 
     @Test
     void isPasswordLong_pwEquals6(){
-        assertFalse(PasswordValidator.isLongerThan7("Shorty"));
+        assertFalse(PasswordValidator.validLength("Shorty"));
     }
     @Test
     void isPasswordLong_pwEquals7(){
-        assertFalse(PasswordValidator.isLongerThan7("Shorty1"));
+        assertFalse(PasswordValidator.validLength("Shorty1"));
     }
     @Test
     void isPasswordLong_pwEquals8(){
-        assertTrue(PasswordValidator.isLongerThan7("Shorty11"));
+        assertTrue(PasswordValidator.validLength("Shorty11"));
     }
 
     @Test

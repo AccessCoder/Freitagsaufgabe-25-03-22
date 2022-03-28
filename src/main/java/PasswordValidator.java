@@ -3,7 +3,11 @@ public class PasswordValidator {
 
     public static String[] forbiddenPasswordList = {"Passwort123", "Passwort123!", "FCBayernMünchen1"};
 
-    public static boolean isLongerThan7(String password){
+    public static boolean isValid(String password){
+        return validLength(password) && checkNums(password) && checkUpperCase(password) && checkLowerCase(password);
+    }
+
+    public static boolean validLength(String password){
         return password.length() > 7;
     }
 
